@@ -1,0 +1,148 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Quicksand', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    background: #ede6df;
+    color: #4b3f35;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100vh;
+}
+
+a {
+    text-decoration: none;
+    color: #a47149;
+    transition: color 0.2s;
+}
+a:hover {
+    color: #6d5845;
+}
+
+.login-bg-image {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    z-index: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+.login-bg-image img {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    filter: brightness(0.85);
+}
+
+.box-login > img[alt="DOUGHLICIOUS"] {
+    border-radius: 0 !important;
+    width: 180px;
+    height: auto;
+    margin-bottom: 18px;
+    background: transparent !important;
+    box-shadow: none !important;
+    filter: none !important;
+}
+
+.box-login {
+    position: relative;
+    z-index: 1;
+    margin-left: 6vw;
+    width: 520px;
+    min-height: 340px;
+    border: none;
+    padding: 32px 28px 24px 28px;
+    border-radius: 18px;
+    box-shadow: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 12px;
+}
+
+.box-login h3, .box-login h2 {
+    color: #a47149;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.input-control {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #a47149 !important;
+    border-radius: 20px;
+    background: #451d0c !important;
+    color: #fff !important;
+    font-size: 1em;
+    transition: border 0.2s, background 0.2s, color 0.2s;
+}
+
+input.input-control:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 1000px #451d0c inset !important;
+    -webkit-text-fill-color: #fff !important;
+}
+
+.input-control::placeholder {
+    color: #fffbe7;
+    opacity: 1;
+}
+.input-control:focus {
+    border: 1.5px solid #6d5845;
+    outline: none;
+    background: #6d5845;
+    color: #fff;
+}
+
+.btn {
+    width: 40%;
+    background: #451d0c !important;
+    padding: 10px 0;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 1.05em;
+    letter-spacing: 1px;
+    transition: background 0.2s;
+    margin-bottom: 20px;
+}
+.btn:hover {
+    background: #6d5845;
+}
+
+.box-login img {
+    width: 64px;
+    height: 64px;
+    margin-bottom: 10px;
+    border-radius: 50%;
+    box-shadow: 0 2px 8px rgba(164, 113, 73, 0.08);
+}
+
+.box-login label {
+    color: #6d5845;
+    text-align: center;
+    font-size: 0.98em;
+    margin-bottom: 4px;
+}
+
+@media (max-width: 700px) {
+    body {
+        justify-content: center;
+    }
+    .box-login {
+        margin-left: 0;
+        width: 95vw;
+        padding: 18px 6vw;
+    }
+}

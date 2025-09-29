@@ -1,0 +1,95 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Quicksand', sans-serif;
+}
+
+.video-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  z-index: -1;
+}
+
+#bg-video {
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+  filter: blur(4px);
+}
+
+.video-overlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(109, 76, 65, 0.45);
+  pointer-events: none;
+  z-index: 1;
+}
+
+header {
+  background-color: rgba(109, 76, 65, 0.95);
+  padding: 0.5rem 0 0.2rem 0;
+  position: relative;
+  z-index: 1;
+}
+
+header .container {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 60px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.section {
+  min-height: 80vh;
+  padding: 4rem 0;
+  color: white;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.section .box {
+  background-color: rgba(109, 76, 65, 0.85);
+  padding: 20px 250px;
+  border-radius: 1rem;
+  margin-top: 1rem;
+  display: inline-block;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+footer {
+  background-color: rgba(109, 76, 65, 0.95);
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  z-index: 1;
+}
+
+body {
+  padding-bottom: 80px;
+}

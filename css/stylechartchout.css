@@ -1,0 +1,159 @@
+html, body {
+  padding: 0;
+  margin: 0;
+  width: 100vw;
+  box-sizing: border-box;
+  height: 100%;
+  min-height: 100vh;
+}
+
+header {
+  background: #6d4c41;
+  color: #fff;
+  padding: 10px 0;
+  width: 100vw;
+  position: relative;
+  left: 0;
+  right: 0;
+  margin: 0;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .titleimage img {
+  width: 95px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+body {
+  background: #f8f7f6;
+  font-family: 'Quicksand', sans-serif;
+  color: #3c2f2f;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+}
+
+.section {
+  flex: 1;
+}
+
+.section h3 {
+  text-align: center;
+  font-size: 24px;
+  color: #3c2f2f;
+  margin-bottom: 20px;
+  text-shadow: 1px 1px #ccc;
+}
+
+.box {
+  background: #ece7dd;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.05);
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.table thead {
+  background-color: #6d4c41;
+  color: white;
+}
+
+.table th, .table td {
+  padding: 12px 15px;
+  text-align: center;
+  border: 1px solid #ddd;
+  font-size: 14px;
+}
+
+.table tbody tr:hover {
+  background-color: #f5f0e8;
+}
+
+.table img {
+  border-radius: 8px;
+}
+
+.btn {
+  background-color: #6d4c41;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #5b3e34;
+}
+
+.footer {
+  background: #6d4c41;
+  color: white;
+  padding: 20px 0;
+  margin-top: 50px;
+  width: 100vw;
+  position: relative;
+  left: 0;
+  right: 0;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.footer h4 {
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+.footer p {
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.footer i {
+  display: block;
+  margin-top: 15px;
+  text-align: center;
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  header {
+    position: sticky;
+    top: 0;
+    z-index: 999;
+  }
+}
