@@ -29,12 +29,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   <div class="container">
     <!-- Panel kiri -->
     <div class="login-panel">
-      <div class="logo">
-        <img src="../img/logo.png" alt="Logo ADASISWA">
-        <h1>ADASISWA</h1>
-        <p>Berjiwa satu, membangun karakter siswa</p>
-      </div>
-
+      
       <div class="welcome">
         <h2>Halo Admin!</h2>
         <p>Selamat datang di website kesiswaan</p>
@@ -64,15 +59,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <button type="submit" class="btn">LOGIN</button>
       </form>
 
-      <!-- Ellipse dekorasi -->
-      <div class="ellipse e1"></div>
-      <div class="ellipse e2"></div>
-      <div class="ellipse e3"></div>
     </div>
 
     <!-- Panel kanan -->
     <div class="image-panel">
-      <img src="../img/loginbg1.png" alt="Sekolah">
+      <img src="../img/logoskatel.png" alt="Sekolah" class="logoskatel">
+      <img src="../img/bgnoteks.png" alt="Sekolah" class="bglogin">
+      <img src="../img/titlelogin.png" alt="Sekolah" class="titlelogin">
+
     </div>
   </div>
 
