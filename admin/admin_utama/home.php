@@ -63,14 +63,18 @@
 			align-items: center;
 		}
         /* Tambahan headline + box statistik */
-        .headline {
-            margin-top: 2rem;
-            margin-bottom: 1.5rem;
-            font-size: 1.8rem;
-            font-weight: 700;
-            color: #fff;
-            z-index: 2;
-        }
+		.headline {
+			margin-top: 3.5rem;      /* lebih jauh ke bawah */
+			margin-bottom: 1.5rem;
+			font-size: 1.8rem;
+			font-weight: 700;
+			color: #fff;
+			z-index: 2;
+			text-align: left;        /* rata kiri */
+			width: 90%;
+			margin-left: 0;          /* pastikan tidak center */
+		}
+		/* ...existing code... */
 
         .stats-boxes {
             display: flex;
@@ -82,12 +86,16 @@
         }
 
         .stat-card {
+			margin-top: 30px;
             flex: 1;
             background: #fff;
             border: 2px solid var(--card-border);
             border-radius: 8px;
             box-shadow: 0 2px 8px #0001;
-            padding: 20px;
+            padding-top: 60px;
+			padding-bottom: 60px;
+			padding-left: 15px;
+			padding-right: 15px;
             min-width: 200px;
             transition: transform 0.2s ease;
         }
@@ -97,6 +105,7 @@
         }
 
         .stat-header {
+			margin-top: -30px;
             display: flex;
             justify-content: space-between;
             font-size: 1.1em;
@@ -111,10 +120,12 @@
         }
 
         .stat-number {
+			padding-top: 10px;
             font-size: 2.2em;
             font-weight: 700;
             text-align: center;
             color: #000;
+			text-align: left;
         }
 		.card-form {
             margin-top: 5rem;
@@ -270,7 +281,7 @@
                     </div>
                     <div class="profile-info">
                         <h3>M. AUFA RAHMAN</h3>
-                        <p><img src="/img/location-dot-solid-full (1).svg" alt="" class="location-icon" style="width:12px;height:12px;filter:invert(1);"> utama</p>
+                        <p><img src="/img/location-dot-solid-full (1).svg" alt="" class="location-icon" style="width:12px;height:12px;filter:invert(1);">Admin utama</p>
                     </div>
                 </div>
             </div>
@@ -349,7 +360,7 @@
 							<td></td>
                             <td class="table-actions">
 								<i title="Edit">&#9998;</i>
-								<i title="Move">&#9776;</i>
+								
 								<i title="Delete">&#128465;</i>
 							</td>
 						</tr>
