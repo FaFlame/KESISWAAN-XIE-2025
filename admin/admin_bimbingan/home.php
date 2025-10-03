@@ -3,8 +3,8 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Home - Admin Utama</title>
-    <link rel="stylesheet" href="../sidebar.css">
+	<title>Home - Admin Bimbingan</title>
+    <link rel="stylesheet" href="/admin/sidebar.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 	<link href="https://fonts.googleapis.com/css2?family=Aclonica&display=swap" rel="stylesheet">
 	<style>
@@ -77,6 +77,47 @@
 			font-family: 'Aclonica', Arial, sans-serif;          /* pastikan tidak center */
 		}
 		/* ...existing code... */
+        
+        /* Kotak statistik panjang */
+.stat-banner {
+    z-index: 2;
+    background: #fff;
+    border: 2px solid var(--card-border);
+    border-radius: 10px;
+    padding: 32px 30px;         /* lebih besar dari sebelumnya */
+    margin-bottom: 2.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    width: 85%;                 /* biar lebar, sama dengan .table-card */
+    min-width: 340px;           /* biar tidak terlalu kecil di layar kecil */
+    max-width: 85%;           /* batasi agar tidak terlalu lebar di desktop */
+}
+
+.stat-content span {
+    font-size: 1.2rem;          /* lebih besar */
+    font-weight: 500;
+    color: #444;
+}
+
+.stat-content h2 {
+    font-size: 2.5rem;          /* headline angka lebih besar */
+    font-weight: 700;
+    margin-top: 5px;
+    color: #000;
+}
+
+.stat-banner i {
+    font-size: 3rem;            /* icon lebih besar */
+    color: var(--primary-color, #953636);
+}
+
+.stat-banner:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
 
         .stats-boxes {
             display: flex;
@@ -283,7 +324,7 @@
                     </div>
                     <div class="profile-info">
                         <h3>M. AUFA RAHMAN</h3>
-                        <p><img src="/img/location-dot-solid-full (1).svg" alt="" class="location-icon" style="width:12px;height:12px;filter:invert(1);">Admin Utama</p>
+                        <p><img src="/img/location-dot-solid-full (1).svg" alt="" class="location-icon" style="width:12px;height:12px;filter:invert(1);">Admin Bimbingan</p>
                     </div>
                 </div>
             </div>
@@ -294,12 +335,6 @@
                 </div>
                     <div class="nav-item">
                         <a href=""><i class="fas fa-hands-helping" style="margin-right: 10px;"></i> Bimbingan</a>
-                    </div>
-                    <div class="nav-item ">
-                        <a href=""><i class="fas fa-trophy" style="margin-right: 10px;"></i> Prestasi</a>
-                    </div>
-                    <div class="nav-item ">
-                        <a href=""><i class="fas fa-calendar-alt" style="margin-right: 10px;"></i> Ekskul</a>
                     </div>
                 <div class="nav-item">
                     <a href=""><i class="fas fa-user-circle" style="margin-right: 10px;"></i> Profil</a>
@@ -326,31 +361,19 @@
             <!-- Tambahan headline + box statistik -->
             <h2 class="headline">Ada berita apa hari ini?</h2>
 
-            <div class="stats-boxes">
-                <div class="stat-card">
-                    <div class="stat-header">
-                        <span>Berita Bimbingan</span>
-                        <i class="fas fa-book-open"></i>
-                    </div>
-                    <div class="stat-number">0</div>
-                </div>
+            <div class="stat-banner">
+    <div class="stat-content">
+        <span>
+            Berita
+            <br> 
+            Bimbingan
+        </span>
+        <h2>0</h2>
+    </div>
+    <i class="fas fa-book-open"></i>
+</div>
 
-                <div class="stat-card">
-                    <div class="stat-header">
-                        <span>Berita Prestasi</span>
-                        <i class="fas fa-trophy"></i>
-                    </div>
-                    <div class="stat-number">0</div>
-                </div>
 
-                <div class="stat-card">
-                    <div class="stat-header">
-                        <span>Berita Ekskul</span>
-                        <i class="fas fa-theater-masks"></i>
-                    </div>
-                    <div class="stat-number">0</div>
-                </div>
-            </div>
 
             <div class="table-card">
 				<table>

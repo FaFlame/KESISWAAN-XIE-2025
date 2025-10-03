@@ -1,13 +1,12 @@
-
 <!DOCTYPE html>
 <html lang="id">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Ekskul Admin</title>
-	<link rel="stylesheet" href="../css/globals.css">
-	<link rel="stylesheet" href="../css/login.css">
-    <link rel="stylesheet" href="sidebar.css">
+	<title>Home - Admin Ekskul</title>
+    <link rel="stylesheet" href="/admin/sidebar.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+	<link href="https://fonts.googleapis.com/css2?family=Aclonica&display=swap" rel="stylesheet">
 	<style>
 		:root {
 			--sidebar-bg: #ffffffff;
@@ -42,10 +41,6 @@
 			height: 88.8px;
 		}
 		.menu-icon {
-			/* font-size: 2em;
-			margin: 0 18px 0 0;
-			color: #fff;
-			cursor: pointer; */
             width: 2rem;
 		}
 		.search-bar {
@@ -68,6 +63,113 @@
 			flex-direction: column;
 			align-items: center;
 		}
+        /* Tambahan headline + box statistik */
+		.headline {
+			margin-top: 3.5rem;      /* lebih jauh ke bawah */
+			margin-bottom: 1.5rem;
+			font-size: 1.5rem;
+			font-weight: normal;
+			color: #fff;
+			z-index: 2;
+			text-align: left;        /* rata kiri */
+			width: 89%;
+			margin-left: 0;
+			font-family: 'Aclonica', Arial, sans-serif;          /* pastikan tidak center */
+		}
+		/* ...existing code... */
+        
+        /* Kotak statistik panjang */
+.stat-banner {
+    z-index: 2;
+    background: #fff;
+    border: 2px solid var(--card-border);
+    border-radius: 10px;
+    padding: 32px 30px;         /* lebih besar dari sebelumnya */
+    margin-bottom: 2.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    width: 85%;                 /* biar lebar, sama dengan .table-card */
+    min-width: 340px;           /* biar tidak terlalu kecil di layar kecil */
+    max-width: 85%;           /* batasi agar tidak terlalu lebar di desktop */
+}
+
+.stat-content span {
+    font-size: 1.2rem;          /* lebih besar */
+    font-weight: 500;
+    color: #444;
+}
+
+.stat-content h2 {
+    font-size: 2.5rem;          /* headline angka lebih besar */
+    font-weight: 700;
+    margin-top: 5px;
+    color: #000;
+}
+
+.stat-banner i {
+    font-size: 3rem;            /* icon lebih besar */
+    color: var(--primary-color, #953636);
+}
+
+.stat-banner:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+        .stats-boxes {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            margin-bottom: 2.5rem;
+            width: 90%;
+            z-index: 2;
+        }
+
+        .stat-card {
+			margin-top: 30px;
+            flex: 1;
+            background: #fff;
+            border: 2px solid var(--card-border);
+            border-radius: 8px;
+            box-shadow: 0 2px 8px #0001;
+            padding-top: 60px;
+			padding-bottom: 60px;
+			padding-left: 15px;
+			padding-right: 15px;
+            min-width: 200px;
+            transition: transform 0.2s ease;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .stat-header {
+			margin-top: -30px;
+            display: flex;
+            justify-content: space-between;
+            font-size: 1.1em;
+            font-weight: 600;
+            margin-bottom: 12px;
+            color: #333;
+        }
+
+        .stat-header i {
+            font-size: 1.3em;
+            color: #581B1B;
+        }
+
+        .stat-number {
+			padding-top: 10px;
+            font-size: 2.2em;
+            font-weight: 700;
+            text-align: center;
+            color: #000;
+			text-align: left;
+        }
 		.card-form {
             margin-top: 5rem;
 			background: #fff;
@@ -209,6 +311,7 @@
 			.sidebar { position: static; width: 100%; height: auto; }
 			.topbar { padding-left: 0; }
 			.card-form, .table-card { width: 98vw; }
+            .stats-boxes { flex-direction: column; align-items: center; }
 		}
 	</style>
 </head>
@@ -221,21 +324,15 @@
                     </div>
                     <div class="profile-info">
                         <h3>M. AUFA RAHMAN</h3>
-                        <p><img src="../img/location-dot-solid-full (1).svg" alt="" class="location-icon" style="width:12px;height:12px;filter:invert(1);"> utama</p>
+                        <p><img src="/img/location-dot-solid-full (1).svg" alt="" class="location-icon" style="width:12px;height:12px;filter:invert(1);">Admin Ekskul</p>
                     </div>
                 </div>
             </div>
 
             <nav class="sidebar-nav">
-                <div class="nav-item">
+                <div class="nav-item active">
                     <a href="#"><i class="fas fa-home" style="margin-right: 10px;"></i> Home</a>
                 </div>
-                    <div class="nav-item active">
-                        <a href=""><i class="fas fa-hands-helping" style="margin-right: 10px;"></i> Bimbingan</a>
-                    </div>
-                    <div class="nav-item ">
-                        <a href=""><i class="fas fa-trophy" style="margin-right: 10px;"></i> Prestasi</a>
-                    </div>
                     <div class="nav-item ">
                         <a href=""><i class="fas fa-calendar-alt" style="margin-right: 10px;"></i> Ekskul</a>
                     </div>
@@ -253,42 +350,33 @@
         </div>
 	<div class="main-content">
 		<div class="topbar">
-			<div class="menu-icon"><img src="../img/bars-solid-full.svg" alt="" style="width: 100%;"></div>
+			<div class="menu-icon"><img src="/img/bars-solid-full.svg" alt="" style="width: 100%;"></div>
 			<div class="search-bar">
 				<input type="text" placeholder="Search">
 			</div>
 		</div>
 		<div class="content-wrapper">
             <div class="banner-box"></div>
-			<div class="card-form">
-				<input type="text" placeholder="Judul berita">
-				<textarea placeholder="Deskripsi"></textarea>
-				<div class="input-row">
-					<input type="text" placeholder="00/00/00">
-				</div>
-				<div class="form-action-row">
-					<div class="file-upload">
-						<label for="fileInput"><span style="font-size:1.2em;"><div class="upload-icon"><img src="../img/cloud-arrow-up-solid-full.svg" alt="" style="height: 100%;"></div></span> Pilih file</label>
-						<input type="file" id="fileInput">
-					</div>
-					<button class="submit-btn">Terbitkan</button>
-				</div>
-			</div>
-			<div class="table-card">
+
+            <!-- Tambahan headline + box statistik -->
+            <h2 class="headline">Ada berita apa hari ini?</h2>
+
+            <div class="stat-banner">
+    <div class="stat-content">
+        <span>
+            Berita
+            <br> 
+            Ekskul
+        </span>
+        <h2>0</h2>
+    </div>
+    <i class="fas fa-book-open"></i>
+</div>
+
+
+
+            <div class="table-card">
 				<table>
-					<!-- <thead>
-						<tr>
-							<th>1</th>
-							<th>SPMB 26/27</th>
-							<th>10/9/25</th>
-							<th></th>
-                            <th class="table-actions">
-								<i title="Edit">&#9998;</i>
-								<i title="Move">&#9776;</i>
-								<i title="Delete">&#128465;</i>
-							</th>
-						</tr>
-					</thead> -->
 					<tbody>
                         <tr>
 							<td>1</td>
@@ -297,17 +385,11 @@
 							<td></td>
                             <td class="table-actions">
 								<i title="Edit">&#9998;</i>
-								<i title="Move">&#9776;</i>
+								
 								<i title="Delete">&#128465;</i>
 							</td>
 						</tr>
-						<tr>
-							<td>2</td>
-							<td></td>
-							<td></td>
-							<td></td>
-                            <td></td>
-						</tr>
+						<tr><td>2</td><td></td><td></td><td></td><td></td></tr>
 						<tr><td>3</td><td></td><td></td><td></td><td></td></tr>
 						<tr><td>4</td><td></td><td></td><td></td><td></td></tr>
 						<tr><td>5</td><td></td><td></td><td></td><td></td></tr>
@@ -317,6 +399,7 @@
 					</tbody>
 				</table>
 			</div>
+            
 		</div>
 	</div>
 </body>

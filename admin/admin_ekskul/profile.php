@@ -4,71 +4,16 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Profil Admin</title>
-	<link rel="stylesheet" href="../css/globals.css">
-	<link rel="stylesheet" href="../css/login.css">
+	<title>Profile - Admin Ekskul</title>
+	<link rel="stylesheet" href="/admin/sidebar.css">	
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 	<style>
 		body {
 			margin: 0;
 			font-family: 'Poppins', Arial, sans-serif;
 			background: #fff;
 		}
-		.sidebar {
-			position: fixed;
-			left: 0;
-			top: 0;
-			width: 313px;
-			height: 100vh;
-			background: #7A2E2E;
-			color: #fff;
-			display: flex;
-			flex-direction: column;
-		}
-		.sidebar-header {
-			padding: 24px 20px 24px 20px;
-			border-bottom: 1px solid rgba(255, 255, 255, 1);
-		}
-		.sidebar-header .profile-pic {
-			width: 40px;
-			height: 40px;
-			border-radius: 50%;
-			background: #fff2;
-			display: inline-block;
-			vertical-align: middle;
-			margin-right: 10px;
-		}
-		.sidebar-header .profile-info {
-			display: inline-block;
-			vertical-align: middle;
-		}
-		.sidebar-header .profile-info .name {
-			font-weight: 600;
-			font-size: 1.1em;
-		}
-		.sidebar-header .profile-info .role {
-			font-size: 0.9em;
-			color: #e0e0e0;
-		}
-		.sidebar-menu {
-			flex: 1;
-			display: flex;
-			flex-direction: column;
-		}
-		.sidebar-menu a {
-			color: #fff;
-			text-decoration: none;
-			padding: 20px 20px;
-			border-bottom: 1px solid rgba(255, 255, 255, 1);
-			font-size: 1.1em;
-			transition: background 0.2s;
-		}
-		.sidebar-menu a.active, .sidebar-menu a:active {
-			background: #581B1B;
-			font-weight: 600;
-		}
-		.sidebar-menu a:hover {
-			background: #a04a4a;
-		}
+		
 		   .main-content {
 			   margin-left: 313px;
 			   padding: 40px 40px 40px 40px;
@@ -153,28 +98,40 @@
 	</style>
 </head>
 <body style="margin:0;">
-	<div class="sidebar">
-		<div class="sidebar-header">
-			<span class="profile-pic">
-				<div class="avatar" style="width:100%;height:100%;border-radius:50%;background:#eee;display:flex;align-items:center;justify-content:center;overflow:hidden;">
-				   <!-- <img src="../img/user.png" alt="User" style="width:100px;height:100px;object-fit:cover;"> -->
-			   </div>
-			</span>
-			<span class="profile-info">
-				<div class="name">M. AUFA RAHMAN</div>
-				<div style="display:flex;align-items:center;gap:6px;margin-top:2px;">
-					<img src="../img/location-dot-solid-full (1).svg" alt="" class="location-icon" style="width:12px;height:12px;filter:invert(1);">
-					<span class="role">Admin Ekskul</span>
-				</div>
-			</span>
-		</div>
-		<div class="sidebar-menu">
-			<a href="#">Home</a>
-			<a href="#">Ekskul</a>
-			<a href="#" class="active">Profil</a>
-			<a href="#" id="logoutBtn">Logout</a>
-		</div>
-	</div>
+		<div class="sidebar">
+            <div class="sidebar-header">
+                <div class="profile">
+                    <div class="profile-img">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="profile-info">
+                        <h3>M. AUFA RAHMAN</h3>
+                        <p><img src="/img/location-dot-solid-full (1).svg" alt="" class="location-icon" style="width:12px;height:12px;filter:invert(1);">Admin Ekskul</p>
+                    </div>
+                </div>
+            </div>
+
+            <nav class="sidebar-nav">
+                <div class="nav-item">
+                    <a href="#"><i class="fas fa-home" style="margin-right: 10px;"></i> Home</a>
+                </div>
+                    <div class="nav-item">
+                        <a href=""><i class="fas fa-calendar-alt" style="margin-right: 10px;"></i> Ekskul</a>
+                    </div>
+                <div class="nav-item active">
+                    <a href=""><i class="fas fa-user-circle" style="margin-right: 10px;"></i> Profil</a>
+                </div>
+                <div class="nav-item">
+                    <form action="" method="POST" style="display: inline;">
+                        <a href="#" onclick="this.parentElement.submit(); return false;">
+                            <i class="fas fa-sign-out-alt" style="margin-right: 10px;"></i> Logout
+                        </a>
+                    </form>
+                </div>
+            </nav>
+        </div>
+        
+
 		<div class="main-content" style="flex:1;min-width:0;">
 		<div class="profile-header">
 			   <div class="avatar" style="width:110px;height:110px;border-radius:50%;background:#eee;display:flex;align-items:center;justify-content:center;overflow:hidden;">

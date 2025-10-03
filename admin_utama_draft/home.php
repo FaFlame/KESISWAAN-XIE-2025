@@ -283,7 +283,7 @@
                     </div>
                     <div class="profile-info">
                         <h3>M. AUFA RAHMAN</h3>
-                        <p><img src="/img/location-dot-solid-full (1).svg" alt="" class="location-icon" style="width:12px;height:12px;filter:invert(1);">Admin Utama</p>
+                        <p><img src="/img/location-dot-solid-full (1).svg" alt="" class="location-icon" style="width:12px;height:12px;filter:invert(1);">Admin utama</p>
                     </div>
                 </div>
             </div>

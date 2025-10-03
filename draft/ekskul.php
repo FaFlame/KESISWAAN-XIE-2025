@@ -1,12 +1,12 @@
+
 <!DOCTYPE html>
 <html lang="id">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Home - Admin Utama</title>
-    <link rel="stylesheet" href="../sidebar.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-	<link href="https://fonts.googleapis.com/css2?family=Aclonica&display=swap" rel="stylesheet">
+	<title>Ekskul Admin</title>
+    <link rel="stylesheet" href="sidebar.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 	<style>
 		:root {
 			--sidebar-bg: #ffffffff;
@@ -41,6 +41,10 @@
 			height: 88.8px;
 		}
 		.menu-icon {
+			/* font-size: 2em;
+			margin: 0 18px 0 0;
+			color: #fff;
+			cursor: pointer; */
             width: 2rem;
 		}
 		.search-bar {
@@ -63,72 +67,6 @@
 			flex-direction: column;
 			align-items: center;
 		}
-        /* Tambahan headline + box statistik */
-		.headline {
-			margin-top: 3.5rem;      /* lebih jauh ke bawah */
-			margin-bottom: 1.5rem;
-			font-size: 1.5rem;
-			font-weight: normal;
-			color: #fff;
-			z-index: 2;
-			text-align: left;        /* rata kiri */
-			width: 89%;
-			margin-left: 0;
-			font-family: 'Aclonica', Arial, sans-serif;          /* pastikan tidak center */
-		}
-		/* ...existing code... */
-
-        .stats-boxes {
-            display: flex;
-            gap: 20px;
-            justify-content: center;
-            margin-bottom: 2.5rem;
-            width: 90%;
-            z-index: 2;
-        }
-
-        .stat-card {
-			margin-top: 30px;
-            flex: 1;
-            background: #fff;
-            border: 2px solid var(--card-border);
-            border-radius: 8px;
-            box-shadow: 0 2px 8px #0001;
-            padding-top: 60px;
-			padding-bottom: 60px;
-			padding-left: 15px;
-			padding-right: 15px;
-            min-width: 200px;
-            transition: transform 0.2s ease;
-        }
-
-        .stat-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .stat-header {
-			margin-top: -30px;
-            display: flex;
-            justify-content: space-between;
-            font-size: 1.1em;
-            font-weight: 600;
-            margin-bottom: 12px;
-            color: #333;
-        }
-
-        .stat-header i {
-            font-size: 1.3em;
-            color: #581B1B;
-        }
-
-        .stat-number {
-			padding-top: 10px;
-            font-size: 2.2em;
-            font-weight: 700;
-            text-align: center;
-            color: #000;
-			text-align: left;
-        }
 		.card-form {
             margin-top: 5rem;
 			background: #fff;
@@ -270,7 +208,6 @@
 			.sidebar { position: static; width: 100%; height: auto; }
 			.topbar { padding-left: 0; }
 			.card-form, .table-card { width: 98vw; }
-            .stats-boxes { flex-direction: column; align-items: center; }
 		}
 	</style>
 </head>
@@ -283,16 +220,16 @@
                     </div>
                     <div class="profile-info">
                         <h3>M. AUFA RAHMAN</h3>
-                        <p><img src="/img/location-dot-solid-full (1).svg" alt="" class="location-icon" style="width:12px;height:12px;filter:invert(1);">Admin Utama</p>
+                        <p><img src="../img/location-dot-solid-full (1).svg" alt="" class="location-icon" style="width:12px;height:12px;filter:invert(1);">Admin utama</p>
                     </div>
                 </div>
             </div>
 
             <nav class="sidebar-nav">
-                <div class="nav-item active">
+                <div class="nav-item">
                     <a href="#"><i class="fas fa-home" style="margin-right: 10px;"></i> Home</a>
                 </div>
-                    <div class="nav-item">
+                    <div class="nav-item active">
                         <a href=""><i class="fas fa-hands-helping" style="margin-right: 10px;"></i> Bimbingan</a>
                     </div>
                     <div class="nav-item ">
@@ -315,45 +252,42 @@
         </div>
 	<div class="main-content">
 		<div class="topbar">
-			<div class="menu-icon"><img src="/img/bars-solid-full.svg" alt="" style="width: 100%;"></div>
+			<div class="menu-icon"><img src="../img/bars-solid-full.svg" alt="" style="width: 100%;"></div>
 			<div class="search-bar">
 				<input type="text" placeholder="Search">
 			</div>
 		</div>
 		<div class="content-wrapper">
             <div class="banner-box"></div>
-
-            <!-- Tambahan headline + box statistik -->
-            <h2 class="headline">Ada berita apa hari ini?</h2>
-
-            <div class="stats-boxes">
-                <div class="stat-card">
-                    <div class="stat-header">
-                        <span>Berita Bimbingan</span>
-                        <i class="fas fa-book-open"></i>
-                    </div>
-                    <div class="stat-number">0</div>
-                </div>
-
-                <div class="stat-card">
-                    <div class="stat-header">
-                        <span>Berita Prestasi</span>
-                        <i class="fas fa-trophy"></i>
-                    </div>
-                    <div class="stat-number">0</div>
-                </div>
-
-                <div class="stat-card">
-                    <div class="stat-header">
-                        <span>Berita Ekskul</span>
-                        <i class="fas fa-theater-masks"></i>
-                    </div>
-                    <div class="stat-number">0</div>
-                </div>
-            </div>
-
-            <div class="table-card">
+			<div class="card-form">
+				<input type="text" placeholder="Judul berita">
+				<textarea placeholder="Deskripsi"></textarea>
+				<div class="input-row">
+					<input type="text" placeholder="00/00/00">
+				</div>
+				<div class="form-action-row">
+					<div class="file-upload">
+						<label for="fileInput"><span style="font-size:1.2em;"><div class="upload-icon"><img src="../img/cloud-arrow-up-solid-full.svg" alt="" style="height: 100%;"></div></span> Pilih file</label>
+						<input type="file" id="fileInput">
+					</div>
+					<button class="submit-btn">Terbitkan</button>
+				</div>
+			</div>
+			<div class="table-card">
 				<table>
+					<!-- <thead>
+						<tr>
+							<th>1</th>
+							<th>SPMB 26/27</th>
+							<th>10/9/25</th>
+							<th></th>
+                            <th class="table-actions">
+								<i title="Edit">&#9998;</i>
+								<i title="Move">&#9776;</i>
+								<i title="Delete">&#128465;</i>
+							</th>
+						</tr>
+					</thead> -->
 					<tbody>
                         <tr>
 							<td>1</td>
@@ -362,11 +296,17 @@
 							<td></td>
                             <td class="table-actions">
 								<i title="Edit">&#9998;</i>
-								
+								<i title="Move">&#9776;</i>
 								<i title="Delete">&#128465;</i>
 							</td>
 						</tr>
-						<tr><td>2</td><td></td><td></td><td></td><td></td></tr>
+						<tr>
+							<td>2</td>
+							<td></td>
+							<td></td>
+							<td></td>
+                            <td></td>
+						</tr>
 						<tr><td>3</td><td></td><td></td><td></td><td></td></tr>
 						<tr><td>4</td><td></td><td></td><td></td><td></td></tr>
 						<tr><td>5</td><td></td><td></td><td></td><td></td></tr>
@@ -376,7 +316,6 @@
 					</tbody>
 				</table>
 			</div>
-            
 		</div>
 	</div>
 </body>
