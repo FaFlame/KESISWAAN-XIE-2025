@@ -30,14 +30,13 @@
 			background-attachment: fixed;
 		}
 
-		/* ===== Navbar ===== (keadaan disamakan dengan landingpage.php => jangan ubah) */
+		/* ===== Navbar ===== */
 		nav {
 			width: 100%;
 			display: flex;
 			justify-content: center;
 			align-items: center;
 			padding: 20px 0;
-			/* Remove horizontal padding */
 			backdrop-filter: blur(6px);
 			position: fixed;
 			top: 0;
@@ -73,17 +72,13 @@
 			display: flex;
 			align-items: center;
 			flex: 1;
-			/* isi sisa ruang antara logo dan kanan */
 		}
 
 		.nav-links {
 			display: flex;
 			gap: 70px;
-			/* Increased gap between items */
 			margin: 0 auto;
-			/* center di area .nav-actions */
 			align-items: center;
-			/* pastikan link sejajar dengan tombol */
 		}
 
 		.nav-links a {
@@ -91,11 +86,9 @@
 			color: #333;
 			font-weight: 500;
 			font-size: 17px;
-			/* Slightly bigger font */
 			position: relative;
 			transition: color 0.25s ease;
 			padding: 6px 0;
-			/* sedikit ruang vertikal agar center */
 			font-family: 'Josefin Sans', sans-serif;
 			line-height: 1;
 		}
@@ -104,7 +97,6 @@
 			color: #a61d2d;
 		}
 
-		/* Garis aktif di bawah menu */
 		.nav-links a.active {
 			color: #a61d2d;
 		}
@@ -124,15 +116,10 @@
 
 		.search-btn {
 			margin-left: 24px;
-			/* jarak antara links dan tombol */
 			width: 44px;
-			/* ukuran kotak */
 			height: 44px;
-			/* sehingga menjadi kotak */
 			padding: 0;
-			/* hapus padding supaya bulat sempurna */
 			border-radius: 50%;
-			/* buat bulat penuh */
 			background: #000;
 			color: #fff;
 			border: none;
@@ -177,8 +164,6 @@
 			letter-spacing: 0.5px;
 		}
 
-		/* ===== Recent (arc) wrapper =====
-           Dipertajam: radius atas dikurangi sehingga "busur" lebih tegas */
 		.recent-wrap {
 			max-width: 1100px;
 			margin: 50px auto 0;
@@ -254,7 +239,6 @@
 			padding: 0;
 		}
 
-		/* ===== News label centered outside box ===== */
 		.news-label {
 			max-width: 1100px;
 			margin: 90px auto 0;
@@ -266,8 +250,6 @@
 			color: #111;
 		}
 
-		/* ===== News rectangular wrapper =====
-           Tidak sampai ujung layar karena max-width dan margin auto */
 		.news-wrap {
 			max-width: 1100px;
 			margin: 12px auto 100px;
@@ -440,7 +422,6 @@
 		<p>KEGIATAN BIMBINGAN & KARAKTER SMK TELKOM BANJARBARU</p>
 	</section>
 
-	<!-- ===== Recent (arc) section wrapper ===== -->
 	<section class="recent-wrap" aria-label="Recent news">
 		<div class="recent-title">
 			<i class="fas fa-envelope-open-text"></i>
@@ -465,7 +446,6 @@
 		</div>
 	</section>
 
-	<!-- ===== News label + boxed news list ===== -->
 	<h2 class="news-label">NEWS</h2>
 
 	<section class="news-wrap">

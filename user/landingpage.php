@@ -12,7 +12,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Amiko:wght@400;700&display=swap" rel="stylesheet">
     <title>Adasiswa | SMK Telkom Banjarbaru</title>
     <style>
-        /* ===== Reset & dasar ===== */
         * {
             margin: 0;
             padding: 0;
@@ -70,17 +69,13 @@
             display: flex;
             align-items: center;
             flex: 1;
-            /* isi sisa ruang antara logo dan kanan */
         }
 
         .nav-links {
             display: flex;
             gap: 70px;
-            /* Increased gap between items */
             margin: 0 auto;
-            /* center di area .nav-actions */
             align-items: center;
-            /* pastikan link sejajar dengan tombol */
         }
 
         .nav-links a {
@@ -88,11 +83,9 @@
             color: #333;
             font-weight: 500;
             font-size: 17px;
-            /* Slightly bigger font */
             position: relative;
             transition: color 0.25s ease;
             padding: 6px 0;
-            /* sedikit ruang vertikal agar center */
             font-family: 'Josefin Sans', sans-serif;
             line-height: 1;
         }
@@ -101,7 +94,6 @@
             color: #a61d2d;
         }
 
-        /* Garis aktif di bawah menu */
         .nav-links a.active {
             color: #a61d2d;
         }
@@ -121,15 +113,10 @@
 
         .search-btn {
             margin-left: 24px;
-            /* jarak antara links dan tombol */
             width: 44px;
-            /* ukuran kotak */
             height: 44px;
-            /* sehingga menjadi kotak */
             padding: 0;
-            /* hapus padding supaya bulat sempurna */
             border-radius: 50%;
-            /* buat bulat penuh */
             background: #000;
             color: #fff;
             border: none;
@@ -169,14 +156,12 @@
             color: #111;
             font-family: 'Josefin Sans', sans-serif;
             font-weight: 700;
-            /* Josefin Sans bold for "ADASISWA UNTUKMU" */
         }
 
         .hero-text h1 span {
             color: #a61d2d;
             font-family: 'Amiko', sans-serif;
             font-weight: 600;
-            /* Amiko semi-bold for subtitle */
         }
 
         .hero-text p {
@@ -184,7 +169,6 @@
             font-size: 15px;
             color: #555;
             font-family: Arial, sans-serif;
-            /* gunakan Arial untuk teks ini */
         }
 
         .buttons {
@@ -216,12 +200,10 @@
 
         .btn-ig i {
             color: #E1306C;
-            /* Instagram color */
         }
 
         .btn-yt i {
             color: #FF0000;
-            /* YouTube color */
         }
 
         .btn-ig:hover,
