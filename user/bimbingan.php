@@ -114,32 +114,6 @@
 			transition: all 0.3s ease;
 		}
 
-		.search-btn {
-			margin-left: 24px;
-			width: 44px;
-			height: 44px;
-			padding: 0;
-			border-radius: 50%;
-			background: #000;
-			color: #fff;
-			border: none;
-			display: inline-flex;
-			align-items: center;
-			justify-content: center;
-			cursor: pointer;
-			font-size: 16px;
-			transition: background 0.15s ease, transform 0.08s ease;
-		}
-
-		.search-btn i {
-			font-size: 16px;
-			line-height: 1;
-		}
-
-		.search-btn:hover {
-			background: #111;
-			transform: translateY(-1px);
-		}
 
 		/* ===== Header ===== */
 		.header {
@@ -163,6 +137,30 @@
 			font-size: 15px;
 			letter-spacing: 0.5px;
 		}
+
+		.hero-image img {
+			max-width: 100%;
+			height: auto;
+			margin-left: 10px;
+			transition: all 0.8s ease-in-out;
+			transform-origin: center;
+			z-index: 999;
+		}
+
+		#main-logo {
+			z-index: 999;
+		}
+
+
+		.logo-move {
+			position: fixed;
+			top: 20px;
+			right: 50px;
+			width: 80px;
+			transform: rotate(52deg);
+			z-index: 999;
+		}
+
 
 		.recent-wrap {
 			max-width: 1100px;
@@ -227,6 +225,13 @@
 			color: #333;
 		}
 
+		.recent-card p a {
+			text-decoration: underline;
+			color: #000000ff;
+			opacity: 75%;
+			font-weight: 500;
+		}
+
 		.recent-card .cloud-icon {
 			display: flex;
 			align-items: center;
@@ -242,7 +247,8 @@
 		.news-label {
 			max-width: 1100px;
 			margin: 90px auto 0;
-			margin-bottom: 30px;
+			margin-top: 30px;
+			padding-bottom: 30px;
 			font-family: 'Aboreto', cursive;
 			font-size: 22px;
 			text-align: center;
@@ -252,7 +258,7 @@
 
 		.news-wrap {
 			max-width: 1100px;
-			margin: 12px auto 100px;
+			margin: 60px auto 100px;
 			background: #fff;
 			border-radius: 12px;
 			padding: 30px 30px;
@@ -266,6 +272,14 @@
 			display: flex;
 			margin-bottom: 20px;
 			overflow: hidden;
+			transition: all 0.3s cubic-bezier(0.22, 0.9, 0.32, 1);
+			position: relative;
+			/* added so read-more can be absolutely positioned */
+		}
+
+		.news-card:hover {
+			transform: translateY(-8px);
+			box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
 		}
 
 		.news-card img {
@@ -277,6 +291,9 @@
 		.news-content {
 			padding: 20px 25px;
 			flex: 1;
+			padding-bottom: 56px;
+			/* reserve space for the absolute link */
+			position: relative;
 		}
 
 		.news-content h3 {
@@ -294,12 +311,15 @@
 		}
 
 		.read-more {
+			position: absolute;
+			right: 18px;
+			bottom: 14px;
 			display: inline-block;
-			margin-top: 5px;
 			font-size: 13.5px;
 			font-weight: 500;
 			color: #000;
 			text-decoration: none;
+			background: transparent;
 		}
 
 		.read-more:hover {
@@ -314,6 +334,8 @@
 			display: flex;
 			justify-content: space-between;
 			flex-wrap: wrap;
+			padding-right: 7vh;
+			text-decoration: none;
 		}
 
 		footer .left {
@@ -344,6 +366,11 @@
 			margin-bottom: 10px;
 			color: #fff;
 			font-family: 'Josefin Sans', sans-serif;
+		}
+
+		footer .menu a {
+			color: #ccc;
+			text-decoration: none;
 		}
 
 		@media (max-width: 900px) {
@@ -409,12 +436,14 @@
 					<a href="ekskul.php">Ekskul</a>
 					<a href="portofolio.php">Portofolio</a>
 				</div>
-				<button class="search-btn" aria-label="Search">
-					<i class="fas fa-search"></i>
-				</button>
 			</div>
 		</div>
 	</nav>
+
+	<div class="hero-image">
+		<img id="main-logo" src="/user/img/logo.png" alt="Hero Logo Image" width="400">
+	</div>
+
 
 	<!-- ===== Header ===== -->
 	<section class="header">
@@ -446,16 +475,15 @@
 		</div>
 	</section>
 
-	<h2 class="news-label">NEWS</h2>
-
 	<section class="news-wrap">
+		<h2 class="news-label">NEWS</h2>
 		<div class="news-card">
 			<img src="/user/img/dokumbimbingan/news1.png" alt="">
 			<div class="news-content">
 				<h3>SMK Telkom Banjarbaru Resmi Membuka Sistem Penerimaan Murid Baru 2026/2027</h3>
 				<p>SMK Telkom Banjarbaru resmi membuka Seleksi Penerimaan Murid Baru (SPMB) Tahun Ajaran 2026/2027 bertepatan dengan peringatan HUT RI ke-80...</p>
 				<small>Senin, 10/22/25</small><br>
-				<a href="#" class="read-more">Lihat Selengkapnya....</a>
+				<a href="user/berita/beritabimbingan/SPMB" class="read-more">Lihat Selengkapnya....</a>
 			</div>
 		</div>
 
@@ -509,8 +537,9 @@
 
 		<div class="menu">
 			<h3>MENU UTAMA</h3>
-			<a href="#">Tentang kami</a>
-			<a href="#">Beranda</a>
+			<a href="landingpage.php"> >Tentang kami</a>
+			<br>
+			<a href="landingpage.php"> >Beranda</a>
 		</div>
 
 		<div class="contact">
@@ -520,6 +549,39 @@
 			<p>Contact Person: 0811 500 5857<br>Contact Person: 0851 0165 6160</p>
 		</div>
 	</footer>
+	<script>
+		document.addEventListener('DOMContentLoaded', function() {
+			const logo = document.getElementById('main-logo');
+
+			if (logo) {
+				setTimeout(() => logo.classList.add('logo-move'), 200);
+			}
+
+			const navAnchors = document.querySelectorAll('.nav-links a');
+			navAnchors.forEach(a => {
+				a.addEventListener('click', function(e) {
+					const href = this.getAttribute('href');
+					const text = this.textContent.trim().toLowerCase();
+
+					let target = href;
+					if (!href || href === '#') {
+						if (text === 'bimbingan') target = 'bimbingan.php';
+						else return;
+					}
+
+					e.preventDefault();
+
+					if (logo) {
+						logo.classList.add('small');
+					}
+
+					setTimeout(() => {
+						window.location.href = target;
+					}, 700);
+				});
+			});
+		});
+	</script>
 </body>
 
 </html>

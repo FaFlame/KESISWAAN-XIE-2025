@@ -111,39 +111,12 @@
             transition: all 0.3s ease;
         }
 
-        .search-btn {
-            margin-left: 24px;
-            width: 44px;
-            height: 44px;
-            padding: 0;
-            border-radius: 50%;
-            background: #000;
-            color: #fff;
-            border: none;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            font-size: 16px;
-            transition: background 0.15s ease, transform 0.08s ease;
-        }
-
-        .search-btn i {
-            font-size: 16px;
-            line-height: 1;
-        }
-
-        .search-btn:hover {
-            background: #111;
-            transform: translateY(-1px);
-        }
-
         /* ===== Hero Section ===== */
         .hero {
             display: flex;
             align-items: center;
             justify-content: space-between;
-            padding: 230px 100px 80px;
+            padding: 210px 100px 80px;
         }
 
         .hero-text {
@@ -169,6 +142,14 @@
             font-size: 15px;
             color: #555;
             font-family: Arial, sans-serif;
+        }
+
+        .hero-image img {
+            max-width: 100%;
+            height: auto;
+            margin-left: 10px;
+            transition: all 0.8s ease-in-out;
+            transform-origin: center;
         }
 
         .buttons {
@@ -250,16 +231,12 @@
 
             <div class="nav-actions">
                 <div class="nav-links">
-                    <a href="landingpage.php" class="active" target="_blank">AdaSiswa</a>
+                    <a href="#"class="active">AdaSiswa</a>
                     <a href="bimbingan.php">Bimbingan</a>
                     <a href="prestasi.php">Prestasi</a>
                     <a href="ekskul.php">Ekskul</a>
                     <a href="portofolio.php">Portofolio</a>
                 </div>
-
-                <button class="search-btn" aria-label="Search">
-                    <i class="fas fa-search" aria-hidden="true"></i>
-                </button>
             </div>
         </div>
     </nav>
@@ -281,6 +258,9 @@
                     SMK Telkom Banjarbaru
                 </a>
             </div>
+        </div>
+        <div class="hero-image">
+            <img src="/user/img/logo.png" alt="Hero Logo Image" width="400">
         </div>
     </section>
 </body>
