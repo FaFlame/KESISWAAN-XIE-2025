@@ -186,16 +186,16 @@
 		</div>
 		<nav class="sidebar-nav">
 			<div class="nav-item active">
-				<a href="#"><i class="fas fa-home" style="margin-right: 10px;"></i> Home</a>
+				<a href="home.php"><i class="fas fa-home" style="margin-right: 10px;"></i> Home</a>
 			</div>
 			<div class="nav-item">
-				<a href="">
+				<a href="portofolio.php">
 					<img src="/img/Portofolio.svg" alt="Portofolio" id="portofolio-icon">
 					Portofolio
 				</a>
 			</div>
 			<div class="nav-item">
-				<a href=""><i class="fas fa-user-circle" style="margin-right: 10px;"></i> Profil</a>
+				<a href="profile.php"><i class="fas fa-user-circle" style="margin-right: 10px;"></i> Profil</a>
 			</div>
 		</nav>
 	</div>
