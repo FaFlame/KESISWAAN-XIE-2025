@@ -68,6 +68,13 @@
 			font-family: 'Aclonica', Arial, sans-serif;
 		}
 
+		#portofolio-icon {
+			width: 20px;
+			height: 20px;
+			margin-right: 10px;
+			vertical-align: middle;
+		}
+
 		.stat-banner {
 			z-index: 2;
 			background: #fff;
@@ -137,7 +144,6 @@
 			box-sizing: border-box;
 		}
 
-		/* select specific tweaks to visually match text inputs */
 		.card-form select {
 			-webkit-appearance: none;
 			-moz-appearance: none;
@@ -148,23 +154,19 @@
 			background-size: 6px 6px, 6px 6px;
 			background-repeat: no-repeat;
 			padding-right: 38px;
-			/* room for pseudo-arrow */
 		}
 
-		/* ensure number inputs don't show ugly spinner on some browsers (optional) */
 		.card-form input[type="number"]::-webkit-outer-spin-button,
 		.card-form input[type="number"]::-webkit-inner-spin-button {
 			-webkit-appearance: none;
 			margin: 0;
 		}
 
-		/* keep each input column vertically stacked so layout matches other inputs */
 		.card-form .input-row>div {
 			display: flex;
 			flex-direction: column;
 		}
 
-		/* small adjustment so the file-upload label keeps consistent spacing */
 		.card-form .file-upload label {
 			font-family: inherit;
 		}
@@ -376,7 +378,10 @@
 				<a href="#"><i class="fas fa-home" style="margin-right: 10px;"></i> Home</a>
 			</div>
 			<div class="nav-item active">
-				<a href=""><i class="fas fa-hands-helping" style="margin-right: 10px;"></i> Portofolio</a>
+				<a href="">
+					<img src="/img/Portofolio.svg" alt="Portofolio" id="portofolio-icon">
+					Portofolio
+				</a>
 			</div>
 			<div class="nav-item">
 				<a href=""><i class="fas fa-user-circle" style="margin-right: 10px;"></i> Profil</a>
@@ -407,48 +412,48 @@
 				<div class="input-row" style="margin-top:12px;">
 					<div style="flex:1">
 						<input id="tanggal" name="tanggal" type="date">
-				</div>
+					</div>
 
-				<div style="flex:1">
-					<select id="tingkat" name="tingkat">
-						<option value="">Pilih Tingkat</option>
-						<option value="sekolah">Sekolah</option>
-						<option value="kota">Kota</option>
-						<option value="provinsi">Provinsi</option>
-						<option value="nasional">Nasional</option>
-						<option value="internasional">Internasional</option>
-					</select>
-				</div>
-				<div style="flex:1">
-					<select id="juara" name="juara">
-						<option value=""> Pilih Juara </option>
-						<option value="juara-1">Juara 1</option>
-						<option value="juara-2">Juara 2</option>
-						<option value="juara-3">Juara 3</option>
-						<option value="harapan">Harapan 1</option>
-						<option value="harapan">Harapan 2</option>
-						<option value="harapan">Harapan 3</option>
-						<option value="peserta">Custom</option>
-					</select>
-				</div>
+					<div style="flex:1">
+						<select id="tingkat" name="tingkat">
+							<option value="">Pilih Tingkat</option>
+							<option value="sekolah">Sekolah</option>
+							<option value="kota">Kota</option>
+							<option value="provinsi">Provinsi</option>
+							<option value="nasional">Nasional</option>
+							<option value="internasional">Internasional</option>
+						</select>
+					</div>
+					<div style="flex:1">
+						<select id="juara" name="juara">
+							<option value=""> Pilih Juara </option>
+							<option value="juara-1">Juara 1</option>
+							<option value="juara-2">Juara 2</option>
+							<option value="juara-3">Juara 3</option>
+							<option value="harapan">Harapan 1</option>
+							<option value="harapan">Harapan 2</option>
+							<option value="harapan">Harapan 3</option>
+							<option value="peserta">Custom</option>
+						</select>
+					</div>
 
-				<div style="flex:1">
-					<input id="poin" name="poin" type="text" placeholder="Poin / Skor Lomba">
-				</div>
+					<div style="flex:1">
+						<input id="poin" name="poin" type="text" placeholder="Poin / Skor Lomba">
+					</div>
 				</div>
 
 				<div class="form-action-row" style="margin-top:18px;">
 
-				<div class="file-upload">
-					<label for="fileInput">
-						<span style="font-size:1.2em;">
-							<div class="upload-icon">
-								<img src="/img/cloud-arrow-up-solid-full.svg" alt="" style="height: 100%;">
-							</div>
-						</span> Pilih file dokumentasi
-					</label>
-					<input type="file" id="fileInput" name="dokumentasi">
-				</div>
+					<div class="file-upload">
+						<label for="fileInput">
+							<span style="font-size:1.2em;">
+								<div class="upload-icon">
+									<img src="/img/cloud-arrow-up-solid-full.svg" alt="" style="height: 100%;">
+								</div>
+							</span> Pilih file dokumentasi
+						</label>
+						<input type="file" id="fileInput" name="dokumentasi">
+					</div>
 
 					<div class="form-actions-left" aria-hidden="true"></div>
 					<button class="submit-btn">Terbitkan</button>

@@ -87,7 +87,7 @@
 			flex: 1;
 			background: #fff;
 			border: 2px solid var(--card-border);
-			border-radius: 8px;
+			border-radius: 5px;
 			box-shadow: 0 2px 8px #0001;
 			padding: 20px;
 			min-width: 200px;
@@ -314,6 +314,13 @@
 			float: none;
 		}
 
+		#portofolio-icon {
+			width: 20px;
+			height: 20px;
+			margin-right: 10px;
+			vertical-align: middle;
+		}
+
 		@media (max-width: 900px) {
 			.main-content {
 				padding: 20px;
@@ -362,7 +369,10 @@
 				<a href="#"><i class="fas fa-home" style="margin-right: 10px;"></i> Home</a>
 			</div>
 			<div class="nav-item">
-				<a href=""><i class="fas fa-hands-helping" style="margin-right: 10px;"></i> Portofolio</a>
+				<a href="">
+					<img src="/img/Portofolio.svg" alt="Portofolio" id="portofolio-icon">
+					Portofolio
+				</a>
 			</div>
 			<div class="nav-item">
 				<a href=""><i class="fas fa-user-circle" style="margin-right: 10px;"></i> Profil</a>
