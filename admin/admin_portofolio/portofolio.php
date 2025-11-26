@@ -425,7 +425,10 @@
 						<option value="juara-1">Juara 1</option>
 						<option value="juara-2">Juara 2</option>
 						<option value="juara-3">Juara 3</option>
-						<option value="harapan">Harapan</option>
+						<option value="harapan">Harapan 1</option>
+						<option value="harapan">Harapan 2</option>
+						<option value="harapan">Harapan 3</option>
+						<option value="peserta">Custom</option>
 					</select>
 				</div>
 
